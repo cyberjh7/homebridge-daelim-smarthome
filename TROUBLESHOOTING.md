@@ -1,32 +1,56 @@
-# 문제 해결
-
-다양한 스펙트럼의 사용자들이 이 소프트웨어를 사용하다 보면 개발자가 예상치 못한 부분에 대하여 때로는 문제나 어려움을 겪을 수도 있습니다.<br>
-이를 해결하기 위하여 본 문서의 절차를 따라 이슈를 작성해주시거나 메일로 문의해주세요.
-<br>
-<br>
-
-## homebridge-ui를 사용하는 사용자의 경우
-1. 해당 문제가 발생했을 때, 어떠한 절차를 거쳐야 문제를 재현할 수 있는지 최대한 설명해주시면 큰 도움이 됩니다.
-2. 로그 다운로드 및 첨부
-   1. homebridge-ui 관리 패널에 접속
-   2. 우측 상단 `로그 보기` 버튼 클릭
-   3. 우측 상단 `다운로드` 버튼 클릭 (사용자 환경에 따라 개인정보 등이 포함될 수 있습니다.)
-   4. 다운로드된 `homebridge.log.txt` 파일을 적절한 검열을 거쳐 [새 이슈 작성](https://github.com/OrigamiDream/homebridge-daelim-smarthome/issues/new)을 해 주시거나 개발자의 [메일](mailto:feuds_ebb.0c@icloud.com)로 보내주세요.
-
-<br>
-<br>
-
-## Terminal에서 직접적으로 사용하는 사용자의 경우
-1. 해당 문제가 발생했을 때, 어떠한 절차를 거쳐야 문제를 재현할 수 있는지 최대한 설명해주시면 큰 도움이 됩니다.
-2. 로그 다운로드
-   1. Terminal 에서 `~/.homebridge` 혹은 사용자 설정된 Homebridge 디렉토리로 이동
-   2. `homebridge.log` 파일을 적절한 검열을 거쳐 [새 이슈 작성](https://github.com/OrigamiDream/homebridge-daelim-smarthome/issues/new)을 해 주시거나 개발자의 [메일](mailto:feuds_ebb.0c@icloud.com)로 보내주세요.
-
-<br>
-<br>
-
-## homebridge.log 파일에서 오류를 분간하는 방법
-
-homebridge-ui 패널의 콘솔에서 관찰하는 경우, 오류가 발생한 기록은 보통 `빨간색`으로 표시됩니다.<br>
-혹은 `TypeError`, `ReferenceError` 등의 문구가 포함되어 오류임을 구분할 수 있습니다.<br><br>
-해당 부분으로부터 **위, 아래로 약 30~50줄 사이를 포함한 텍스트**에서 개인정보를 최대한 가린 후 위 절차를 따라 주세요.
+Setup Payload:
+X-HM://002443H5JFATI
+Enter this code with your HomeKit app on your iOS device to pair with Homebridge:
+                       
+    ┌────────────┐     
+    │ 389-07-287 │     
+    └────────────┘     
+                       
+[${this.displayName}] Selected "avahi" advertiser though it isn't available on the platform. Reverting to "bonjour-hap"
+[5/20/2022, 2:30:26 PM] Homebridge v1.4.1 (HAP v0.10.2) (Homebridge 0E78) is running on port 52858.
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] Complex info about (e편한세상 신봉담) has found.
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] Connected to server
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"id":"cyberjh7","pw":"x9zncktf#","UUID":"623D3238CFB015703460AC79ED9479C1"}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: 00000000, Type: LOGIN, Sub Type: CERTIFICATION_PIN_RESPONSE, Error: SUCCESS) :: {"ho":"404","dong":"106","id":"cyberjh7","certpin":"C6622926"}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"id":"cyberjh7","pw":"x9zncktf#","certpin":"C6622926"}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: C6622926, Type: LOGIN, Sub Type: LOGIN_PIN_RESPONSE, Error: SUCCESS) :: {"householder":"y","loginpin":"L4179101"}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: LOGIN, Sub Type: MENU_RESPONSE, Error: SUCCESS) :: {"parking":true,"Loc":true,"parcel":true,"emsinfo":"type5","shop":true,"wallsocket":true,"controlinfo":{"wallsocket":[{"uid":"013111","uname":"거실1"},{"uid":"013121","uname":"거실2"},{"uid":"013131","uname":"침실1-1"},{"uid":"013141","uname":"침실1-2"},{"uid":"013151","uname":"침실2-1"},{"uid":"013161","uname":"침실2-2"},{"uid":"013171","uname":"주방"}],"light":[{"uid":"012611","dimming":"y","uname":"거실"},{"uid":"012511","dimming":"n","uname":"복도"},{"uid":"012521","dimming":"n","uname":"침실1-1"},{"uid":"012522","dimming":"n","uname":"침실1-2"},{"uid":"012531","dimming":"n","uname":"침실2"}],"gas":[{"uid":"012711","uname":"주방"}],"heating":[{"uid":"012411","uname":"거실"},{"uid":"012412","uname":"침실1"},{"uid":"012413","uname":"침실2"}]},"control":true,"ems":true,"cctv":false,"mgroffice":false,"emsunit":{"hotwater":"㎥","gas":"㎥","elec":"kWh","heating":"MWh","water":"㎥"},"healthcare":false,"fan":false,"elevator":true,"gas":true,"visitor":true,"notice":true}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"type":"query","item":[{"device":"light","uid":"All"}]}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"type":"query","item":[{"device":"wallsocket","uid":"All"}]}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"type":"query","item":[{"device":"heating","uid":"All"}]}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"type":"query","item":[{"device":"gas","uid":"All"}]}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"type":"query","item":[{"device":"light","uid":"All"}]}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"type":"query","item":[{"device":"wallsocket","uid":"All"}]}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"type":"query","item":[{"device":"heating","uid":"All"}]}
+[5/20/2022, 2:30:27 PM] [DaelimSmartHomePlatform] ===> {"type":"query","item":[{"device":"gas","uid":"All"}]}
+[5/20/2022, 2:30:28 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"uid":"012711","arg1":"off","device":"gas"}],"type":"response"}
+[5/20/2022, 2:30:30 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"uid":"012711","arg1":"off","device":"gas"}],"type":"response"}
+[5/20/2022, 2:30:34 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":27,"uid":"012411","arg2":20,"arg1":"on","device":"heating"},{"arg3":27,"uid":"012412","arg2":20,"arg1":"on","device":"heating"},{"arg3":27,"uid":"012413","arg2":20,"arg1":"on","device":"heating"}],"type":"response"}
+[5/20/2022, 2:30:35 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":27,"uid":"012411","arg2":20,"arg1":"on","device":"heating"},{"arg3":27,"uid":"012412","arg2":20,"arg1":"on","device":"heating"},{"arg3":27,"uid":"012413","arg2":20,"arg1":"on","device":"heating"}],"type":"response"}
+[5/20/2022, 2:30:38 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:30:38 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"n","uid":"012511","arg1":"off","device":"light"},{"arg3":"n","uid":"012521","arg1":"off","device":"light"},{"arg3":"n","uid":"012522","arg1":"off","device":"light"},{"arg3":"n","uid":"012531","arg1":"off","device":"light"},{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:30:38 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:30:39 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"n","uid":"012511","arg1":"off","device":"light"},{"arg3":"n","uid":"012521","arg1":"off","device":"light"},{"arg3":"n","uid":"012522","arg1":"off","device":"light"},{"arg3":"n","uid":"012531","arg1":"off","device":"light"},{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:30:41 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"uid":"013111","arg1":"on","device":"wallsocket"},{"uid":"013121","arg1":"off","device":"wallsocket"},{"uid":"013131","arg1":"off","device":"wallsocket"},{"uid":"013141","arg1":"on","device":"wallsocket"},{"uid":"013151","arg1":"off","device":"wallsocket"},{"uid":"013161","arg1":"on","device":"wallsocket"},{"uid":"013171","arg1":"off","device":"wallsocket"}],"type":"response"}
+[5/20/2022, 2:30:41 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"uid":"013111","arg1":"on","device":"wallsocket"},{"uid":"013121","arg1":"off","device":"wallsocket"},{"uid":"013131","arg1":"off","device":"wallsocket"},{"uid":"013141","arg1":"on","device":"wallsocket"},{"uid":"013151","arg1":"off","device":"wallsocket"},{"uid":"013161","arg1":"on","device":"wallsocket"},{"uid":"013171","arg1":"off","device":"wallsocket"}],"type":"response"}
+[5/20/2022, 2:31:00 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"7","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:05 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"4","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:10 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"1","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:13 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:18 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"1","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:23 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"4","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:28 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"7","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:34 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:40 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"7","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:44 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:47 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"7","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:51 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"4","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:55 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:31:58 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"4","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:32:06 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:32:09 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"4","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:32:11 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"1","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:32:16 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
+[5/20/2022, 2:32:18 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"1","arg1":"on","device":"light"}],"type":"response"}
+[5/20/2022, 2:32:24 PM] [DaelimSmartHomePlatform] <=== HEAD(PIN: L4179101, Type: DEVICE, Sub Type: QUERY_RESPONSE, Error: SUCCESS) :: {"item":[{"arg3":"y","uid":"012611","arg2":"0","arg1":"off","device":"light"}],"type":"response"}
